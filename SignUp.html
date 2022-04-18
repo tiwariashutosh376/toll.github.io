@@ -1,0 +1,101 @@
+<?php
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TCS-SignUp</title>
+
+    <link rel="stylesheet" href="SignUpStyle.css">
+
+        <!-- JavaScript confirm validation -->
+    <script type="text/javascript">
+        var check = function() 
+        {
+            if (document.getElementById('pass').value ==
+                document.getElementById('re_pass').value) {
+                document.getElementById('message').style.color = 'green';
+                document.getElementById('message').innerHTML = 'match';
+            } else {
+                document.getElementById('message').style.color = 'red';
+                document.getElementById('message').innerHTML = 'not matching';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <h1 class="form-title">Welcome to SJCEM </h1>
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form method="POST" action="insert.php" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="Full_Name" id="name" placeholder="Your Full Name"/>
+                            </div>
+                            <div class="form-group">
+                                Select date of birth : <input name="D_O_B" type="date">
+                            </div>
+                            <div class="form-group">
+                                <label for="address"><i class="zmdi zmdi-address"></i></label>
+                                <input type="text" name="address" id="address" placeholder="Your Address"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact"><i class="zmdi zmdi-contact"></i></label>
+                                <input type="tel" name="contactNO" id="contactNo" placeholder="Your Contact Number"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email_ID" id="email" placeholder="Your Email"/>
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="type"><i class="zmdi zmdi-email"></i></label> -->
+                                <!-- <table style="width:100%">
+                                    <tr>
+                                        <td>Account Type </td>
+                                        <td>
+                                             <select type="type" name="Account_type" id="type"  placeholder="Account Type"/>
+                                                    <option value="admin">Admin</option>
+                                                    <option value="user">User</option>
+                                             </select>
+                                        </td>
+                                    </tr>
+                                </table> -->
+                                <select name="Account_type"  placeholder="Account Type"/>
+                                            <option value="">----Select Account Type----</option>
+                                            <option value="admin">Admin</option>
+                                            <option value="user">User</option>
+                                </select>
+                           </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="passWord" id="pass" placeholder="Password"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="Re_pass" id="re_pass" onkeyup='check();' placeholder="Repeat your password"/>
+                                <span id='message'></span>
+                            </div>
+                            
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="images/signup.jpeg" alt="sing up image"></figure>
+                        <a href="index.html" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> TCS </title>
+        <link rel="stylesheet" href="SignUpStyle.css">
+        <link rel="stylesheet" type="text/css" href="glow_btn.css">
+
+    </head>
+    <body>
+       <div class="main">
+        <h2 class="form-title">Toll Tax Collection System</h2>
+            <!-- Login in  Form -->
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="images/about.png" alt="sing up image"></figure>
+                        <a href="SignUp.html" class="signup-image-link">Create an account</a>
+                    </div>
+
+                    <div class="signin-form">
+                        <h2 class="form-title">Sign in</h2>
+                        <form method="POST" action="loginvalidation.php" class="register-form" id="login-form">
+                            <div class="form-group">
+                                <label for="your_email"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="your_Loginemail" id="your_email" placeholder="Your Email"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="your_Loginpass" id="your_pass" placeholder="Password"/>
+                            </div>
+<!--                             <div class="form-group">
+                                <select type="type" name="your_Logintype" id="type"  placeholder="Account Type"/>
+                                            <option value="blank">----Select Account Type----</option>
+                                            <option value="admin">Admin</option>
+                                            <option value="user">User</option>
+                                </select>
+                            </div> -->
+                            <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                                
+                            </div>
+                            
+                            </div>
+
+                        </form>
+                            <!-- social meidea -->
+                        <!-- <div class="social-login">
+                            <span class="social-label">Or login with</span>
+                            <ul class="socials">
+                                 <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                 <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                                 <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                            </ul>
+                        </div>
+                         -->
+                    </div>
+              
+        </section>
+       </div>
+    </body>
+</html>
